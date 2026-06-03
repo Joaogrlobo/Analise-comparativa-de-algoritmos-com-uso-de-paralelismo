@@ -28,7 +28,6 @@ Abaixo, apresenta-se a representação do comportamento de desempenho observado 
 1. Escalabilidade da CPU e a Lei de Amdahl: O processamento multi-thread na CPU exibiu excelente  ganho de velocidade (Speedup). O cálculo clássico de speedup é definido por: 
 S = Tserial / Tparalelo 
 Para o arquivo de maior volume (*Don Quixote*), a transição de 1 para 8 threads reduziu o tempo de 78  ms para 22 ms, alcançando um speedup de aproximadamente 3.54×. Esse comportamento comprova 
-Vinicius Andrade & João Guilherme Ribeiro Lobo Página 3 
 que a quebra estática do texto por linhas distribuiu uniformemente o peso computacional, reduzindo os  gargalos de sincronização. 
 2. O Paradoxo do Custo de Comunicação na GPU: Um resultado contra-intuitivo para observadores  leigos é o tempo elevado da GPU (~490 ms). Academicamente, isto é perfeitamente justificado pelo  custo fixo de preparação do ecossistema OpenCL. A transferência do vetor de caracteres da memória  RAM do Host para a VRAM do dispositivo através do barramento PCI Express, somada à compilação 
 em tempo de execução do código do kernel (clBuildProgram), adiciona uma latência rígida. Como o  tamanho dos arquivos texto (~2.2 MB) é pequeno para os padrões de uma GPU moderna, a fase de  processamento paralelo real dura frações de milissegundo, enquanto o overhead de comunicação  consome a maior parte do tempo total. 
