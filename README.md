@@ -24,7 +24,7 @@ Ao término das rodadas de execução, o framework calcula a média aritmética 
 4. Resultados e Discussão 
 Os ensaios experimentais demonstraram comportamentos altamente previsíveis do ponto de vista da  teoria de computação concorrente. A tabela abaixo consolida as médias dos tempos obtidos (em  milissegundos) para a varredura e busca de termos de alta frequência nos livros: 
 
-![Tabela de Desempenho]([Captura de tela 2026-06-01 180224.png](https://github.com/Joaogrlobo/Analise-comparativa-de-algoritmos-com-uso-de-paralelismo/blob/main/Captura%20de%20tela%202026-06-01%20180224.png))
+![Tabela de Desempenho][([Captura de tela 2026-06-01 180224.png](https://github.com/Joaogrlobo/Analise-comparativa-de-algoritmos-com-uso-de-paralelismo/blob/main/Captura%20de%20tela%202026-06-01%20180224.png))](https://github.com/Joaogrlobo/Analise-comparativa-de-algoritmos-com-uso-de-paralelismo/blob/d0d0bb80f6d80a33756d517386f73f6fc8e64b78/Captura%20de%20tela%202026-06-01%20180224.png)
 
 4.1. Análise Comparativa do Tempo de Execução 
 Abaixo, apresenta-se a representação do comportamento de desempenho observado nos testes para a  maior carga de trabalho:
