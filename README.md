@@ -54,5 +54,5 @@ Para o processamento de arquivos isolados ou de volumetria moderada (na escala d
 
 
 7. Anexos: Códigos das Implementações 
-https://github.com/Joaogrlobo/Analise-comparativa-de-algoritmos-com-uso-de-paralelismo.git
+[https://github.com/Joaogrlobo/Analise-comparativa-de-algoritmos-com-uso-de-paralelismo.git](https://github.com/Joaogrlobo/Analise-comparativa-de-algoritmos-com-uso-de-paralelismo.git)
 
