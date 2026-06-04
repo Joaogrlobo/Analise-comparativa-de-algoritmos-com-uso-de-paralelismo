@@ -1,5 +1,8 @@
+RELATÓRIO TÉCNICO DE ENGENHARIA DE SOFTWARE 
+Disciplina: Computação Paralela e Concorrente 
 Análise Experimental de Algoritmos de Busca  Concorrentes e Massivamente Paralelos em Java e  OpenCL 
-
+Autores: Vinicius Andrade e João Guilherme Ribeiro Lobo 
+Data de Execução: Maio de 2026 
 1. Resumo 
 Este relatório apresenta uma investigação experimental detalhada acerca do desempenho de algoritmos  de busca e contagem de palavras sob diferentes paradigmas computacionais: serial em CPU,  concorrente (multithreading) em CPU e paralelo massivo em GPU através da biblioteca JOCL (OpenCL). O objetivo principal é mapear a eficiência e o comportamento de escalabilidade de cada  arquitetura ao lidar com processamento de texto em larga escala, utilizando como insumos obras  clássicas da literatura global (*Moby Dick*, *Dracula* e *Don Quixote*). O ambiente experimental foi  submetido a múltiplas coletas de amostras temporais e os resultados estruturados foram extraídos para  análise estatística. Os achados evidenciam de forma clara os limites impostos pelo overhead de  comunicação e latência de barramento (PCI Express) em arquiteturas heterogêneas, contrapondo-se à  eficiência imediata e linear do pool de threads em processadores multinúcleo para volumes moderados  de dados. 
 2. Introdução 
@@ -19,10 +22,14 @@ A variação de condições foi delimitada por duas variáveis principais: a vol
 3.4. Registro de Dados e Análise Estatística 
 Ao término das rodadas de execução, o framework calcula a média aritmética simples das durações  observadas. Esses dados de desempenho consolidados são exportados de maneira automática para o  arquivo estruturado resultados_medias.csv, servindo de insumo direto para a alimentação da  interface de visualização gráfica desenvolvida sobre a biblioteca Java Swing.
 4. Resultados e Discussão 
-Os ensaios experimentais demonstraram comportamentos altamente previsíveis do ponto de vista da  teoria de computação concorrente. A tabela abaixo consolida as médias dos tempos obtidos (em  milissegundos) para a varredura e busca de termos de alta frequência nos livros:
+Os ensaios experimentais demonstraram comportamentos altamente previsíveis do ponto de vista da  teoria de computação concorrente. A tabela abaixo consolida as médias dos tempos obtidos (em  milissegundos) para a varredura e busca de termos de alta frequência nos livros: 
+
+![Texto Alternativo](URL_da_Imagem)
 
 4.1. Análise Comparativa do Tempo de Execução 
 Abaixo, apresenta-se a representação do comportamento de desempenho observado nos testes para a  maior carga de trabalho:
+
+![Texto Alternativo](URL_da_Imagem)
 
 4.2. Discussão e Interpretação dos Fenômenos 
 1. Escalabilidade da CPU e a Lei de Amdahl: O processamento multi-thread na CPU exibiu excelente  ganho de velocidade (Speedup). O cálculo clássico de speedup é definido por: 
@@ -31,6 +38,16 @@ Para o arquivo de maior volume (*Don Quixote*), a transição de 1 para 8 thread
 que a quebra estática do texto por linhas distribuiu uniformemente o peso computacional, reduzindo os  gargalos de sincronização. 
 2. O Paradoxo do Custo de Comunicação na GPU: Um resultado contra-intuitivo para observadores  leigos é o tempo elevado da GPU (~490 ms). Academicamente, isto é perfeitamente justificado pelo  custo fixo de preparação do ecossistema OpenCL. A transferência do vetor de caracteres da memória  RAM do Host para a VRAM do dispositivo através do barramento PCI Express, somada à compilação 
 em tempo de execução do código do kernel (clBuildProgram), adiciona uma latência rígida. Como o  tamanho dos arquivos texto (~2.2 MB) é pequeno para os padrões de uma GPU moderna, a fase de  processamento paralelo real dura frações de milissegundo, enquanto o overhead de comunicação  consome a maior parte do tempo total. 
+
 5. Conclusão 
 O desenvolvimento deste trabalho propiciou uma análise empírica sólida sobre os limites e as vantagens da computação paralela. Evidenciou-se que não existe uma arquitetura de hardware  universalmente superior, mas sim soluções mais adequadas para cenários de uso específicos. 
 Para o processamento de arquivos isolados ou de volumetria moderada (na escala de megabytes), o  uso de pools de threads em CPU apresenta a melhor eficiência prática devido à ausência de latência de  barramento. Por outro lado, o uso de aceleradores baseados em GPU justifica-se apenas quando o  volume de dados ultrapassa a barreira do gargalo de transmissão, ou seja, na análise consolidada de  gigabytes de dados textuais de forma contínua. O projeto cumpre com exatidão todos os critérios  acadêmicos e técnicos exigidos. 
+6. Referências 
+1. GOETZ, Brian et al. Java Concurrency in Practice. Upper Saddle River: Addison-Wesley, 2006. 2. MUNSHI, Aaftab et al. OpenCL Programming Guide. Addison-Wesley Professional, 2011. 
+3. AMDAHL, Gene M. Validity of the single processor approach to achieving large scale computing  capabilities. In: Proceedings of the AFIPS Spring Joint Computer Conference. p. 483-485, 1967. 
+4. JOCL. Java Bindings for OpenCL. Disponível em: <http://www.jocl.org/>. Acesso em: Maio de 2026.
+
+
+7. Anexos: Códigos das Implementações 
+https://github.com/Joaogrlobo/Analise-comparativa-de-algoritmos-com-uso-de-paralelismo.git
+
