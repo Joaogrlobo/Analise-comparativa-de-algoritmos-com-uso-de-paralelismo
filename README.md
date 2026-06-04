@@ -28,7 +28,7 @@ Os ensaios experimentais demonstraram comportamentos altamente previsíveis do p
 4.1. Análise Comparativa do Tempo de Execução 
 Abaixo, apresenta-se a representação do comportamento de desempenho observado nos testes para a  maior carga de trabalho:
 
-![Image alt][(URL_da_Imagem)](https://github.com/Joaogrlobo/Analise-comparativa-de-algoritmos-com-uso-de-paralelismo/blob/a3feda4edbca284b755eb40b4e42df59ed516b73/Captura%20de%20tela%202026-06-01%20180234.png)
+![Image alt](https://github.com/Joaogrlobo/Analise-comparativa-de-algoritmos-com-uso-de-paralelismo/blob/a3feda4edbca284b755eb40b4e42df59ed516b73/Captura%20de%20tela%202026-06-01%20180234.png)
 
 4.2. Discussão e Interpretação dos Fenômenos 
 1. Escalabilidade da CPU e a Lei de Amdahl: O processamento multi-thread na CPU exibiu excelente  ganho de velocidade (Speedup). O cálculo clássico de speedup é definido por: 
