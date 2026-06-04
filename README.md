@@ -32,7 +32,7 @@ Os ensaios experimentais demonstraram comportamentos altamente previsíveis do p
 ![Image alt](https://github.com/Joaogrlobo/Analise-comparativa-de-algoritmos-com-uso-de-paralelismo/blob/d0d0bb80f6d80a33756d517386f73f6fc8e64b78/Captura%20de%20tela%202026-06-01%20180224.png)
 
 <p align="center">
-  <img src="[https://githubusercontent.com](https://github.com/Joaogrlobo/Analise-comparativa-de-algoritmos-com-uso-de-paralelismo/blob/d0d0bb80f6d80a33756d517386f73f6fc8e64b78/Captura%20de%20tela%202026-06-01%20180224.png)" alt="Sua Imagem Centralizada" width="500">
+  <img src="https://github.com/Joaogrlobo/Analise-comparativa-de-algoritmos-com-uso-de-paralelismo/blob/d0d0bb80f6d80a33756d517386f73f6fc8e64b78/Captura%20de%20tela%202026-06-01%20180224.png" alt="https://github.com/Joaogrlobo/Analise-comparativa-de-algoritmos-com-uso-de-paralelismo/blob/d0d0bb80f6d80a33756d517386f73f6fc8e64b78/Captura%20de%20tela%202026-06-01%20180224.png" width="500">
 </p
 4.1. Análise Comparativa do Tempo de Execução 
 Abaixo, apresenta-se a representação do comportamento de desempenho observado nos testes para a  maior carga de trabalho:
