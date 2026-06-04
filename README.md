@@ -57,6 +57,6 @@ Para o processamento de arquivos isolados ou de volumetria moderada (na escala d
 4. JOCL. Java Bindings for OpenCL. Disponível em: <http://www.jocl.org/>. Acesso em: Maio de 2026.
 
 
-7. Anexos: Códigos das Implementações 
-[https://github.com/Joaogrlobo/Analise-comparativa-de-algoritmos-com-uso-de-paralelismo.git](https://github.com/Joaogrlobo/Analise-comparativa-de-algoritmos-com-uso-de-paralelismo.git)
+7. Anexos: 
+[[https://github.com/Joaogrlobo/Analise-comparativa-de-algoritmos-com-uso-de-paralelismo.git](https://github.com/Joaogrlobo/Analise-comparativa-de-algoritmos-com-uso-de-paralelismo.git)](https://github.com/Joaogrlobo/Analise-comparativa-de-algoritmos-com-uso-de-paralelismo.git)
 
